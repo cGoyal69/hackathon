@@ -1,13 +1,202 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    font-family: "Martian Mono";
+    width: 100%;
+    height: 100%;
+    background: #b2b4aa;
+    transition: background-color 1s;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.container-page{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+}
+.nav-page{
+    position: fixed;
+    width: 100%;
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.nav-page p, footer p{
+    color: #fff;
+    font-size: 12px;
+}
+.nav-page > div{
+    flex: 1;
+}
+.menu-btn p{
+    width: max-content;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 40px;
+    backdrop-filter: blur(20px);
+    padding: 6px 12px;
+}
+.logo{
+    display: flex; 
+}
+.local-time{
+    display: flex;
+    justify-content: right;
+}
+.logo a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 0.5em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+.items-page{
+    position: fixed;
+    width: 30%;
+    height: 100vh;
+    padding: 0 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+}
+.item-page{
+    width: max-content;
+    padding: 0.25em 0;
+    cursor: pointer;
+}
+.item-page p{
+    color: #fff;
+    padding: 6px 12px;
+    font-weight: lighter;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 40px;
+    backdrop-filter: blur(20px);
+    transition: 0.3s;
+}
+.item-page:hover p{
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 4px;
+}
+.preview{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    color: #fff;
+    z-index: 3;
+}
+.preview-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+.preview-title h1{
+    font-weight: lighter;
+    font-size: 80px;
+}
+.preview-tags p, .preview-description p{
+    font-size: 14px;
+    line-height: 120%;
+}
+.preview.variant-1, .preview-img{
+    position: absolute;
+    bottom: 0;
+    right: 0%;
+    margin: 2em;
+    width: 300px;
+    height: 400px;
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+.preview.variant-1, .preview-title{
+    position: absolute;
+    top: 35%;
+    left: 25%;
+}
+.preview.variant-1, .preview-tags{
+    position: absolute;
+    bottom: 25%;
+    right: 40%;
+}
+.preview.variant-1, .preview-description{
+    position: absolute;
+    width: 250px;
+    right: 25%;
+    top: 25%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.preview.variant-2, .preview-img{
+    position: absolute;
+    bottom: 0;
+    right: 0%;
+    margin: 2em;
+    width: 300px;
+    height: 400px;
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+.preview.variant-2, .preview-title{
+    position: absolute;
+    top: 35%;
+    left: 25%;
+}
+.preview.variant-2, .preview-tags{
+    position: absolute;
+    bottom: 25%;
+    right: 40%;
+}
+.preview.variant-2, .preview-description{
+    position: absolute;
+    width: 250px;
+    right: 25%;
+}
+
+
+.preview.variant-3, .preview-img{
+    position: absolute;
+    bottom: 0;
+    right: 0%;
+    margin: 2em;
+    width: 300px;
+    height: 400px;
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+.preview.variant-3, .preview-title{
+    position: absolute;
+    top: 35%;
+    left: 25%;
+}
+.preview.variant-3, .preview-tags{
+    position: absolute;
+    bottom: 25%;
+    right: 40%;
+}
+.preview.variant-3, .preview-description{
+    position: absolute;
+    width: 250px;
+    right: 25%;
+}
+.timetext{
+    margin-right: 4px;
 }
